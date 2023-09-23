@@ -45,18 +45,18 @@ const aboutData = [
   },
   {
     title: 'experience',
-    info: [
+    info: [  
       {
-        title: 'Front-end web developer - Chrome Infosoft',
-        stage: '2022 - present',
+        title: 'Information Technology Web Developer  - Wastely Aqua',
+        stage: '2023 - present',
       },
       {
-        title: 'React Developer - Wastely Aqua (Free lancing)',
+        title: 'Front-end web developer - Chrome Infosoft',
         stage: '2022 - 2023',
       },
       {
-        title: 'Front end developer - Narja Super steel',
-        stage: '202-2023',
+        title: 'Web developer - Narja Super steel (Free lancing)',
+        stage: '2022-2023',
       },
     ],
   },
