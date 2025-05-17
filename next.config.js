@@ -4,7 +4,7 @@ const nextConfig = {
     //     domains: ["plus.unsplash.com","images.unsplash.com","img.freepik.com"]
     //  }
     images: {
-        domains: ["plus.unsplash.com", "images.unsplash.com", "img.freepik.com", "*.freepik.com"]
+        domains: ["plus.unsplash.com", "images.unsplash.com", "img.freepik.com", "*.freepik.com","miro.medium.com"]
     }
     
 }

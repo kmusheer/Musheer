@@ -1,39 +1,146 @@
 "use client"
 import React, { useState } from 'react';
-import { FaHtml5, FaCss3, FaJs, FaReact, FaWordpress , FaNodeJs } from 'react-icons/fa';
-import { SiNextdotjs, SiFramer, SiAdobexd, SiAdobephotoshop, SiCanva } from 'react-icons/si';
+import { FaHtml5, FaCss3, FaJs, FaReact, FaWordpress, FaNodeJs, FaMicrochip, FaBootstrap, FaWifi, FaDatabase, FaProjectDiagram, FaCogs, FaPuzzlePiece, FaSitemap, FaMemory, FaRedo } from 'react-icons/fa';
+import { SiNextdotjs, SiFramer, SiAdobexd, SiAdobephotoshop, SiCanva, SiCplusplus, SiArduino, SiRaspberrypi, SiGit, SiGithub, SiVisualstudiocode, SiLinux, SiC, SiWindows, SiLoop, SiBootstrap, SiTailwindcss, SiBluetooth, SiInternetarchive, SiVisualstudio, SiArm } from 'react-icons/si';
 import Circles from '../components/Circles';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../components/variant';
 import CountUp from 'react-countup';
 import Avatar1 from '../components/Avatar1';
+import { icons } from 'react-icons';
 
 const aboutData = [
+  // {
+  //   title: 'skills',
+  //   info: [
+  //     {
+  //       title: 'Web Development',
+  //       icons: [
+  //         <FaHtml5 key={FaHtml5} />,
+  //         <FaCss3 key={FaCss3} />,
+  //         <FaJs key={FaJs} />,
+  //         <FaReact key={FaReact} />,
+  //         <FaNodeJs key={FaNodeJs} />,
+  //         <FaWordpress key={FaWordpress} />,
+  //         <FaBootstrap key={FaBootstrap} />,
+  //         <SiTailwindcss key={SiTailwindcss} />
+
+  //       ],
+  //     },
+  //     {
+  //       title: 'UI/UX Design',
+  //       icons: [
+  //         <SiNextdotjs key={SiNextdotjs} />,
+  //         <SiFramer key={SiFramer} />,
+  //         <SiAdobexd key={SiAdobexd} />,
+  //         <SiAdobephotoshop key={SiAdobephotoshop} />,
+  //         <SiCanva key={SiCanva} />
+  //       ],
+  //     },
+  //     {
+  //       title: 'Embedded Systems',
+  //       icons: [
+  //         <SiC key="c-lang" />,
+  //         <SiCplusplus key="cpp-lang" />,
+  //         // <SiArduino key="arduino" />,
+  //         <SiRaspberrypi key="raspberry" />,
+  //         <FaMicrochip key="microchip" />
+  //         // <SiMbed key="mbed" />
+  //       ],
+  //     },
+  //     {
+  //       title: 'Networking & Protocols',
+  //       icons: [
+  //         <FaWifi key="wifi" />,
+  //         <SiBluetooth key="bluetooth" />,
+  //         <SiInternetarchive key="tcpip" />  // Representing TCP/IP
+  //       ],
+  //     },
+  //     {
+  //       title: 'Tools & Platforms',
+  //       icons: [
+  //         <SiGit key="git" />,
+  //         <SiGithub key="github" />,
+  //         <SiVisualstudiocode key="vscode" />,
+  //         <SiLinux key="linux" />,
+  //         <SiWindows key="windows" />
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     title: 'skills',
     info: [
       {
         title: 'Web Development',
         icons: [
-          <FaHtml5 key={FaHtml5} />,
-          <FaCss3 key={FaCss3} />,
-          <FaJs key={FaJs} />,
-          <FaReact key={FaReact} />,
-          <FaNodeJs key={FaNodeJs} />,
-          <FaWordpress key={FaWordpress} />
+          { icon: <FaHtml5 key="html5" />, title: "HTML5" },
+          { icon: <FaCss3 key="css3" />, title: "CSS3" },
+          { icon: <FaJs key="js" />, title: "JavaScript" },
+          { icon: <FaReact key="react" />, title: "React.js" },
+          { icon: <FaNodeJs key="nodejs" />, title: "Node.js" },
+          { icon: <FaWordpress key="wordpress" />, title: "WordPress" },
+          { icon: <FaBootstrap key="bootstrap" />, title: "Bootstrap" },
+          { icon: <SiTailwindcss key="tailwind" />, title: "Tailwind CSS" },
         ],
       },
       {
         title: 'UI/UX Design',
-        icons: [<SiNextdotjs key={SiNextdotjs} />,
-        <SiFramer key={SiFramer} />,
-        <SiAdobexd key={SiAdobexd} />,
-        <SiAdobephotoshop key={SiAdobephotoshop} />,
-        <SiCanva key={SiCanva} />
-      ],
+        icons: [
+          { icon: <SiNextdotjs key="nextjs" />, title: "Next.js" },
+          { icon: <SiFramer key="framer" />, title: "Framer" },
+          { icon: <SiAdobexd key="adobexd" />, title: "Adobe XD" },
+          { icon: <SiAdobephotoshop key="photoshop" />, title: "Adobe Photoshop" },
+          { icon: <SiCanva key="canva" />, title: "Canva" },
+        ],
+      },
+      {
+        title: 'Embedded Systems',
+        icons: [
+          { icon: <SiC key="c-lang" />, title: "C Language" },
+          { icon: <SiCplusplus key="cpp-lang" />, title: "C++ Language" },
+          // { icon: <SiArduino key="arduino" />, title: "Arduino" }, // optional if you want to uncomment
+          // { icon: <SiRaspberrypi key="raspberry" />, title: "Raspberry Pi" },
+          { icon: <FaMicrochip key="microchip" />, title: "Microchip" },
+          { icon: <SiArm key="ARM" />, title: "ARM" },
+          // { icon: <FaMicrochip key="mbed" />, title: "Mbed" }, // fallback or custom SVG recommended
+        ],
+      },
+      {
+        title: 'Networking & Protocols',
+        icons: [
+          { icon: <FaWifi key="wifi" />, title: "Wi-Fi" },
+          // { icon: <SiBluetooth key="bluetooth" />, title: "Bluetooth" },
+          { icon: <SiInternetarchive key="tcpip" />, title: "TCP/IP" },
+        ],
+      },
+      {
+        title: 'Programming Concepts',
+        icons: [
+          { icon: <FaCogs key="procedural" />, title: "Procedural Programming" },
+          { icon: <FaPuzzlePiece key="modular" />, title: "Modular Programming" },
+          { icon: <FaSitemap key="structured" />, title: "Structured Programming" },
+          { icon: <FaMemory key="pointers" />, title: "Pointers & Memory" },
+          { icon: <FaDatabase key="datastructures" />, title: "Data Structures" },
+          { icon: <FaRedo key="recursion" />, title: "Recursion" },
+          { icon: <FaMicrochip key="bitwise" />, title: "Bit Manipulation" },
+          { icon: <FaProjectDiagram key="oop" />, title: "Object-Oriented Programming" }
+        ],
+      },
+      {
+        title: 'Tools & Platforms',
+        icons: [
+          { icon: <SiGit key="git" />, title: "Git" },
+          { icon: <SiGithub key="github" />, title: "GitHub" },
+          { icon: <SiVisualstudiocode key="vscode" />, title: "VS Code" },
+          { icon: <SiVisualstudio key="vstudio" />, title: "Visual studio" },
+          { icon: <SiLinux key="linux" />, title: "Linux" },
+          { icon: <SiWindows key="windows" />, title: "Windows" },
+        ],
       },
     ],
   },
+
   {
     title: 'awards',
     info: [
@@ -45,10 +152,14 @@ const aboutData = [
   },
   {
     title: 'experience',
-    info: [  
+    info: [
+      {
+        title: 'Embedded System training  - Vector India Hyderabad',
+        stage: '2024 - 2025',
+      },
       {
         title: 'Information Technology Web Developer  - Wastely Aqua',
-        stage: '2023 - present',
+        stage: '2023 - 2024',
       },
       {
         title: 'Front-end web developer - Chrome Infosoft',
@@ -64,12 +175,32 @@ const aboutData = [
     title: 'credentials',
     info: [
       {
+        title: 'Certified Embedded developer - Vector India, Hyderabad, TS',
+        stage: '2025',
+      },
+      {
+        title: 'Certified Effective Prompt Writing - Be10x',
+        stage: '2024',
+      },
+      {
+        title: 'Certified AI tools workshop - Be10x',
+        stage: '2023',
+      },
+      {
+        title: 'Certified CSS3 SAAS and SCSS mega course - Udemy',
+        stage: '2023',
+      },
+      {
+        title: 'Certified React.js Crash course - Udemy',
+        stage: '2023',
+      },
+      {
         title: 'Certified Web Development - NetTech India, Thane, MH',
         stage: '2022',
       },
       {
         title: 'Computer Engineering - JIEMS, AKkalkuwa, MH',
-        stage: '2020',
+        stage: '2021',
       },
       {
         title: 'Diploma in Computer Science - Jamia Polytechnice, Akkalkuwa MH',
@@ -101,7 +232,7 @@ const Page = () => {
           exit={'hidden'}
           className='h2'
         >
-          Innovative coding <span className='text-accent'>fosters captivating</span>  designs in web development.
+          Innovative coding <span className='text-accent'>fosters captivating</span>  designs.
         </motion.h2>
         <motion.p
           variants={fadeIn('right', 0.2)}
@@ -109,7 +240,11 @@ const Page = () => {
           animate='show'
           exit={'hidden'}
           className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
-          2 years ago, I began as a web developer and also worked on some freelance projects. I have teleworked, consulted startups and collaborated on digital products for companies and consumers.
+          Over the past 2 years, I’ve worked professionally as a Front-End Developer, creating responsive, user-focused web interfaces using HTML, CSS, JavaScript, React.js, and Bootstrap. I’ve teleworked, collaborated with startups, and delivered freelance projects that automated billing, improved UI responsiveness, and enhanced user experiences across platforms.
+          <br />
+          Recently, I completed a comprehensive training program in Embedded Systems at Vector India, where I gained hands-on experience with C, Embedded C, ARM microcontrollers, real-time operating principles, and IoT integration. Through project work, I developed a sensor monitoring system using LPC2148 and ESP01, sparking a deeper interest in embedded technologies.
+          <br />
+          I’m now looking to combine my strong front-end foundation with my growing embedded skill set to contribute to versatile, end-to-end digital solutions.
         </motion.p>
 
         <motion.div
@@ -155,11 +290,14 @@ const Page = () => {
         </motion.div>
       </div>
       <motion.div
-            variants={fadeIn('left', 0.4)}
-            initial='hidden'
-            animate='show'
-            exit={'hidden'}
-             className='flex flex-col w-full xl:max-w-[48%] max-h-[480px] xl:h-[480px]'>
+        variants={fadeIn('left', 0.4)}
+        initial='hidden'
+        animate='show'
+        exit={'hidden'}
+        className='flex flex-col w-full xl:max-w-[48%] max-h-[480px] xl:h-[480px]'>
+
+
+
         <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
           {aboutData.map((item, itemIndex) => (
             <div key={itemIndex}
@@ -170,7 +308,7 @@ const Page = () => {
           ))}
         </div>
         <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
-          {aboutData[index].info.map((item, itemIndex) => {
+          {/* {aboutData[index].info.map((item, itemIndex) => {
             return (
               <div key={itemIndex} className='flex-1 flex flex-col md:flex-row max-w-max gap-x-2'>
                 <div className='font-light mb-2 md:mb-0'>{item.title}</div>
@@ -187,9 +325,31 @@ const Page = () => {
                 </div>
               </div>
             )
-          })}
+          })} */}
+
+          {aboutData[index].info.map((item, itemIndex) => (
+            <div key={itemIndex} className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2">
+              <div className="font-light mb-2 md:mb-0">{item.title}</div>
+              <div className="hidden md:flex">-</div>
+              <div>{item.stage}</div>
+              <div className="flex gap-x-4">
+                {item.icons?.map(({ icon, title }, iconIndex) => (
+                  <div
+                    key={iconIndex}
+                    className="relative group text-2xl cursor-default"
+                  >
+                    {icon}
+                    <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-black/80 px-2 py-1 text-xs text-white opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-200 z-50">
+                      {title}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
 
         </div>
+
       </motion.div>
     </div>
   </div>

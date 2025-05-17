@@ -25,7 +25,10 @@ const Services = () => {
                         animate='show'
                         exit={'hidden'}
                         className=" mb-4 max-w-[400px] mx-auto lg:mx-0">
-                        My portfolio offers a comprehensive range of services, including strategic branding, meticulous development, compelling copyrighting, impactful SEO, and visionary design. I specialize in crafting holistic digital solutions that elevate brands and drive meaningful online engagement. Let's collaborate to transform your vision into a dynamic online reality.
+                        {/* My portfolio offers a comprehensive range of services, including strategic branding, meticulous development, compelling copyrighting, impactful SEO, and visionary design. I specialize in crafting holistic digital solutions that elevate brands and drive meaningful online engagement. Let's collaborate to transform your vision into a dynamic online reality. */}
+                        With a strong foundation in front-end development and a growing interest in embedded systems, I offer a focused range of services to help businesses create functional and engaging digital experiences. From crafting responsive web interfaces to consulting on UI enhancements and basic branding, my approach merges technical precision with thoughtful design. Whether you’re a startup looking for sleek front-end development or a team needing intuitive UI components, I bring practical, results-driven solutions to the table.
+                        <br />
+                        Let’s collaborate to bring your digital ideas to life with clean code, smooth design, and a user-first mindset.
                     </motion.p>
                 </div>
                 <motion.div

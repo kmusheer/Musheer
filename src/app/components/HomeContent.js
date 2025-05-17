@@ -25,8 +25,8 @@ const HomeContent = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'>
-              Experienced Front-End Developer skilled in HTML, CSS, and JavaScript, with a passion for user-centric design. Proficient in React, Next.js, Node.js, MongoDB, and GitHub. Actively seeking opportunities to leverage my UI/UX expertise for creating captivating web interfaces and enhancing user experiences.
+              className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 xl:text-white'>
+              Multidisciplinary Embedded Systems Engineer and Front-End Developer with practical knowledge in C, C++, Embedded C, and ARM-based microcontrollers (LPC2148, STM32). Experienced in creating real-time embedded applications, IoT solutions, and cloud-connected sensor systems. On the front end, experienced in HTML, CSS, JavaScript, React.js, and Bootstrap, with experience in scalable frameworks such as Next.js and back-end tools such as Node.js and MongoDB. Enthusiastic about maximizing the intersection of hardware and software to provide smooth, user-focused digital experiences in both physical and digital spaces.
             </motion.p>
             <div className='flex justify-center xl:hidden relative'>
               <ProjectsBtn />

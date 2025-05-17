@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { RiYoutubeLine, RiFacebookLine, RiInstagramLine, RiLinkedinLine, RiTwitterLine, RiDownload2Line } from "react-icons/ri"
+import { RiYoutubeLine, RiFacebookLine, RiInstagramLine, RiLinkedinLine, RiTwitterLine, RiDownload2Line, RiTelegramLine, RiWhatsappLine } from "react-icons/ri"
 
 const Socials = () => {
   return <div className="flex items-center gap-x-5 text-lg ">
@@ -8,11 +8,13 @@ const Socials = () => {
         <RiDownload2Line />
       </button>
     </Link>
-    <Link href={''} className=" hover:text-accent transition-all duration-300" ><RiYoutubeLine /></Link>
-    <Link href={'https://www.facebook.com/musheer.khan.9081?mibextid=ZbWKwL'} target="blank" className=" hover:text-accent transition-all duration-300" > <RiFacebookLine /> </Link>
-    <Link href={'https://www.instagram.com/mu.sheer_k/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D'} target="blank" className=" hover:text-accent transition-all duration-300" > <RiInstagramLine /> </Link>
-    <Link href={'https://www.linkedin.com/in/moshir-khan/'} target="blank" className=" hover:text-accent transition-all duration-300" > <RiLinkedinLine /> </Link>
-    <Link href={'https://twitter.com/musheer_k?t=ycg-bL9rmVzeWmP_9xMGIg&s=09'} target="blank"  className=" hover:text-accent transition-all duration-300" > <RiTwitterLine /> </Link>
+    {/* <Link href={''} className=" hover:text-accent transition-all duration-300" ><RiYoutubeLine /></Link> */}
+    <Link href={'https://wa.me/6393533028'} target="blank" rel="noopener noreferrer" className=" hover:text-accent transition-all duration-300" ><RiWhatsappLine /></Link>
+    <Link href={'https://t.me/musheerKhan799'} target="blank" rel="noopener noreferrer" className=" hover:text-accent transition-all duration-300" ><RiTelegramLine /></Link>
+    {/* <Link href={'https://www.facebook.com/musheer.khan.9081?mibextid=ZbWKwL'} target="blank" rel="noopener noreferrer" className=" hover:text-accent transition-all duration-300" > <RiFacebookLine /> </Link> */}
+    <Link href={'https://www.instagram.com/mu.sheer_k/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D'} target="blank" rel="noopener noreferrer" className=" hover:text-accent transition-all duration-300" > <RiInstagramLine /> </Link>
+    <Link href={'https://www.linkedin.com/in/moshir-khan/'} target="blank" rel="noopener noreferrer" className=" hover:text-accent transition-all duration-300" > <RiLinkedinLine /> </Link>
+    <Link href={'https://twitter.com/musheer_k?t=ycg-bL9rmVzeWmP_9xMGIg&s=09'} target="blank" rel="noopener noreferrer"  className=" hover:text-accent transition-all duration-300" > <RiTwitterLine /> </Link>
   </div>;
 };
 
