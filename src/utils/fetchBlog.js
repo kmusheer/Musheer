@@ -1,38 +1,45 @@
+// fetchBlog.js
 export const getBlogs = async () => {
   const URL = process.env.API_URL;
+
+  if (!URL) {
+    console.error("API_URL not defined");
+    return null;
+  }
+
   try {
-    let response = await fetch(URL);
-    if (response.status === 404) {
-      console.warn("Resource not found:", URL);
-      return null; // Return null or handle the error in a way that makes sense for your application.
-    }
+    const response = await fetch(URL);
     if (!response.ok) {
-      throw new Error(`Fetch failed with status: ${response.status}`);
+      console.warn("Failed to fetch blogs:", response.status);
+      return null;
     }
-    let data = await response.json();
+    const data = await response.json();
     return data;
   } catch (error) {
-    console.error("Error fetching data:", error);
-    throw error; // Rethrow the error to handle it higher up in your code.
+    console.error("Error fetching blogs:", error);
+    return null;
   }
 };
 
-
 export const getBlog = async (id) => {
-  const BLOG_API_URL = process.env.BLOG_API_URL;
-  const URL = `${BLOG_API_URL}/${id}`;
+  const BASE_URL = process.env.BLOG_API_URL;
+
+  if (!BASE_URL) {
+    console.error("BLOG_API_URL not defined");
+    return null;
+  }
+
+  const URL = `${BASE_URL}/${id}`;
   try {
-    let data = await fetch(URL);
-    if (!data.ok) {
-      throw new Error(`Fetch failed with status: ${data.status}`);
+    const response = await fetch(URL);
+    if (!response.ok) {
+      if (response.status === 404) return null;
+      throw new Error(`Fetch failed with status: ${response.status}`);
     }
-    if (data.status === 404) {
-      return null;
-    }
-    data = await data.json();
+    const data = await response.json();
     return data.result;
   } catch (error) {
-    console.error("Error fetching data:", error);
-    throw error;
+    console.error("Error fetching blog:", error);
+    return null;
   }
 };
