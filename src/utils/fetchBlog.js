@@ -1,12 +1,8 @@
-// fetchBlog.js
-
 export const getBlogs = async () => {
   try {
-    // const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`, {
-    const response = await fetch(`https://musheer-viy1.vercel.app/api/blogs`, {
-      cache: "no-store", // force server-side fetching at runtime
-    }); 
-    // console.log('API URL:', process.env.NEXT_PUBLIC_BASE_URL);
+    const response = await fetch(`/api/blogs`, {
+      cache: "no-store",
+    });
 
     if (!response.ok) {
       console.warn("Failed to fetch blogs:", response.status);
@@ -23,7 +19,7 @@ export const getBlogs = async () => {
 
 export const getBlog = async (id) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs/${id}`, {
+    const response = await fetch(`/api/blogs/${id}`, {
       cache: "no-store",
     });
 
