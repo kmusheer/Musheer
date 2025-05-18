@@ -1,4 +1,5 @@
-import { blogs } from "@/utils/staticDbBlog";
+// import { blogs } from "@/utils/staticDbBlog";
+import { blogs } from '@/models/Blogs';
 import { NextResponse } from "next/server";
 
 export function GET(request, {params}){
