@@ -7,7 +7,8 @@ const Page = async ({ params }) => {
   const blogId = params.blogid;
 
   // Find the blog from local model
-  const singleData = blogs.find(blog => blog.id === blogId);
+  // const singleData = blogs.find(blog => blog.id === blogId);
+  const singleData = blogs.find(blog => blog.id.toString() === blogId);
 
   if (!singleData) {
     notFound(); // Trigger 404 if blog not found
@@ -26,12 +27,13 @@ const Page = async ({ params }) => {
 
 export default Page;
 
-
 export async function generateStaticParams() {
   return blogs.map(blog => ({
-    blogid: blog.id,
+    blogid: blog.id.toString(),  // convert number to string here
   }));
 }
+
+
 
 
 
