@@ -42,7 +42,7 @@ const testimonialData = [
   },
   {
     image: '/images/t-avt-2.png',
-    name: 'Jane Doe',
+    name: 'Willen long',
     position: 'Director',
     message:
       'From concept to reality, their development turned our ideas into a seamless digital experience.'
@@ -63,7 +63,7 @@ const testimonialData = [
   },
   {
     image: '/images/t-avt-3.png',
-    name: 'Jhon Doe',
+    name: 'Dustin pelletier',
     position: 'Founder',
     message:
       'Wordsmiths extraordinaire! Their copywriting transformed our message into compelling narratives that resonate.'
